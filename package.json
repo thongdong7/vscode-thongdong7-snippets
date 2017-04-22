@@ -1,0 +1,132 @@
+{
+    "name": "thongdong7-snippets",
+    "displayName": "thongdong7 Snippets",
+    "description": "Personal snippets and keybindings",
+    "version": "0.0.6",
+    "publisher": "thongdong7",
+    "engines": {
+        "vscode": "^1.11.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript.json"
+            }
+        ],
+        "keybindings": [
+            {
+                "key": "alt+f3",
+                "command": "editor.action.changeAll",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+down",
+                "command": "editor.action.moveLinesDownAction",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+up",
+                "command": "editor.action.moveLinesUpAction",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+shift+f",
+                "command": "editor.action.formatDocument",
+                "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "f2",
+                "command": "editor.action.copyLinesUpAction",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "f3",
+                "command": "editor.action.goToDeclaration",
+                "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+            },
+            {
+                "key": "f4",
+                "command": "editor.action.deleteLines",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "f5",
+                "command": "editor.action.clipboardCopyAction",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "f7",
+                "command": "editor.action.clipboardCutAction",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "f6",
+                "command": "editor.action.clipboardPasteAction",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "ctrl+.",
+                "command": "editor.action.marker.next",
+                "when": "editorFocus && !editorReadonly"
+            },
+            {
+                "key": "alt+shift+r",
+                "command": "editor.action.rename",
+                "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "alt+f12",
+                "command": "workbench.action.terminal.toggleTerminal"
+            },
+            {
+                "key": "ctrl+e",
+                "command": "editor.action.addSelectionToPreviousFindMatch"
+            },
+            {
+                "key": "f11",
+                "command": "workbench.action.tasks.runTask",
+                "args": "storybook"
+            },
+            {
+                "key": "f12",
+                "command": "workbench.action.tasks.terminate"
+            },
+            {
+                "key": "meta+s",
+                "command": "workbench.action.files.save"
+            },
+            {
+                "key": "ctrl+s",
+                "command": "workbench.action.files.save"
+            },
+            {
+                "key": "alt+backspace",
+                "command": "deleteWordLeft",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+backspace",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "alt+delete",
+                "command": "deleteWordRight",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+delete",
+                "when": "editorTextFocus && !editorReadonly"
+            }
+        ]
+    },
+    "devDependencies": {
+        "vsce": "*"
+    },
+    "scripts": {
+        "publish": "vsce publish"
+    }
+}

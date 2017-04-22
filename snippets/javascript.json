@@ -1,0 +1,100 @@
+{
+  "Print to console": {
+    "prefix": "log",
+    "body": [
+      "console.log($1);"
+    ],
+    "description": "Log output to console"
+  },
+  "Map State To Props": {
+    "prefix": "mapStateToProps",
+    "body": [
+      "const mapStateToProps = state => {",
+      "  return {",
+      "    $1",
+      "  }",
+      "}"
+    ]
+  },
+  "Map Dispatch To Props": {
+    "prefix": "mapDispatchToProps",
+    "body": [
+      "const mapDispatchToProps = (dispatch: Function) => {",
+      "  return {",
+      "    $1",
+      "  }",
+      "}"
+    ]
+  },
+  "React Component": {
+    "prefix": "rcomp",
+    "body": [
+      "// @flow",
+      "import React, {Component} from 'react'",
+      "",
+      "type TProps = {",
+      "};",
+      "",
+      "export default class ${1:$TM_FILENAME} extends Component {",
+      "  props: TProps",
+      "  ",
+      "  render() {",
+      "    return (",
+      "      $2",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "React Component"
+  },
+  "React PropTypes": {
+    "prefix": "ptypes",
+    "body": [
+      "static propTypes = {",
+      "  $1",
+      "}",
+      ""
+    ],
+    "description": "React PropTypes"
+  },
+  "Javascript Class": {
+    "prefix": "cl",
+    "body": [
+      "class ${1:$TM_FILENAME} {",
+      "  constructor($2) {",
+			"  	 $3",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "Javascript Class"
+  },
+  "ES6 Import": {
+    "prefix": "imp",
+    "body": [
+      "import $1 from \"$2\";"
+    ],
+    "description": "Javascript Class"
+  },
+  "ESLint disable": {
+    "prefix": "esd",
+    "body": [
+      "/* eslint-disable */"
+    ],
+    "description": "Disable ESLint for file"
+  },
+  "Import Styled Components": {
+    "prefix": "imps",
+    "body": [
+      "import styled from \"styled-components\";"
+    ]
+  },
+  "Create Styled Components Container": {
+    "prefix": "sc",
+    "body": [
+      "const $1 = styled.${2:div}`",
+      "  $3",
+      "`;"
+    ]
+  }
+}
