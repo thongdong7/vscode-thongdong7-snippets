@@ -2,7 +2,7 @@
     "name": "thongdong7-snippets",
     "displayName": "thongdong7 Snippets",
     "description": "Personal snippets and keybindings",
-    "version": "0.0.6",
+    "version": "0.0.8",
     "publisher": "thongdong7",
     "engines": {
         "vscode": "^1.11.0"
@@ -87,15 +87,6 @@
                 "command": "editor.action.addSelectionToPreviousFindMatch"
             },
             {
-                "key": "f11",
-                "command": "workbench.action.tasks.runTask",
-                "args": "storybook"
-            },
-            {
-                "key": "f12",
-                "command": "workbench.action.tasks.terminate"
-            },
-            {
                 "key": "meta+s",
                 "command": "workbench.action.files.save"
             },
@@ -120,6 +111,30 @@
             {
                 "key": "ctrl+delete",
                 "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "alt+c",
+                "command": "toggleFindCaseSensitive",
+                "when": "editorFocus"
+            },
+            {
+                "key": "ctrl+/",
+                "command": "editor.action.commentLine",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+f1",
+                "command": "workbench.action.tasks.runTask",
+                "args": "storybook"
+            },
+            {
+                "key": "alt+f1",
+                "command": "workbench.action.tasks.terminate"
+            },
+            {
+                "key": "ctrl+f11",
+                "command": "workbench.action.debug.start",
+                "when": "!inDebugMode"
             }
         ]
     },
@@ -127,6 +142,7 @@
         "vsce": "*"
     },
     "scripts": {
-        "publish": "vsce publish"
+        "publish": "vsce publish",
+        "login": "vsce login thongdong7"
     }
 }
