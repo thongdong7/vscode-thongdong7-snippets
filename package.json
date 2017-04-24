@@ -2,7 +2,7 @@
     "name": "thongdong7-snippets",
     "displayName": "thongdong7 Snippets",
     "description": "Personal snippets and keybindings",
-    "version": "0.0.8",
+    "version": "0.0.11",
     "publisher": "thongdong7",
     "engines": {
         "vscode": "^1.11.0"
@@ -123,12 +123,11 @@
                 "when": "editorTextFocus && !editorReadonly"
             },
             {
-                "key": "ctrl+f1",
-                "command": "workbench.action.tasks.runTask",
-                "args": "storybook"
+                "key": "ctrl+f2",
+                "command": "workbench.action.tasks.runTask"
             },
             {
-                "key": "alt+f1",
+                "key": "alt+f2",
                 "command": "workbench.action.tasks.terminate"
             },
             {
