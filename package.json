@@ -2,7 +2,7 @@
     "name": "thongdong7-snippets",
     "displayName": "thongdong7 Snippets",
     "description": "Personal snippets and keybindings",
-    "version": "0.0.14",
+    "version": "0.0.16",
     "publisher": "thongdong7",
     "engines": {
         "vscode": "^1.11.0"
