@@ -2,7 +2,7 @@
     "name": "thongdong7-snippets",
     "displayName": "thongdong7 Snippets",
     "description": "Personal snippets and keybindings",
-    "version": "0.0.6",
+    "version": "0.0.14",
     "publisher": "thongdong7",
     "engines": {
         "vscode": "^1.11.0"
@@ -69,6 +69,11 @@
                 "when": "editorTextFocus"
             },
             {
+                "key": "cmd+v",
+                "command": "editor.action.clipboardPasteAction",
+                "when": "editorTextFocus"
+            },
+            {
                 "key": "ctrl+.",
                 "command": "editor.action.marker.next",
                 "when": "editorFocus && !editorReadonly"
@@ -87,21 +92,50 @@
                 "command": "editor.action.addSelectionToPreviousFindMatch"
             },
             {
-                "key": "f11",
-                "command": "workbench.action.tasks.runTask",
-                "args": "storybook"
-            },
-            {
-                "key": "f12",
-                "command": "workbench.action.tasks.terminate"
-            },
-            {
                 "key": "meta+s",
                 "command": "workbench.action.files.save"
             },
             {
                 "key": "ctrl+s",
                 "command": "workbench.action.files.save"
+            },
+            {
+                "key": "ctrl+.",
+                "command": "editor.action.marker.next",
+                "when": "editorFocus && !editorReadonly"
+            },
+            {
+                "key": "alt+shift+r",
+                "command": "editor.action.rename",
+                "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+s",
+                "command": "workbench.action.files.save"
+            },
+            {
+                "key": "ctrl+p",
+                "command": "workbench.action.quickOpen"
+            },
+            {
+                "key": "cmd+shift+up",
+                "command": "editor.action.insertCursorAbove",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "cmd+shift+down",
+                "command": "editor.action.insertCursorBelow",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "alt+shift+up",
+                "command": "editor.action.insertCursorAbove",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "alt+shift+down",
+                "command": "editor.action.insertCursorBelow",
+                "when": "editorTextFocus"
             },
             {
                 "key": "alt+backspace",
@@ -120,6 +154,29 @@
             {
                 "key": "ctrl+delete",
                 "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "alt+c",
+                "command": "toggleFindCaseSensitive",
+                "when": "editorFocus"
+            },
+            {
+                "key": "ctrl+/",
+                "command": "editor.action.commentLine",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+f2",
+                "command": "workbench.action.tasks.runTask"
+            },
+            {
+                "key": "alt+f2",
+                "command": "workbench.action.tasks.terminate"
+            },
+            {
+                "key": "ctrl+f11",
+                "command": "workbench.action.debug.start",
+                "when": "!inDebugMode"
             }
         ]
     },
@@ -127,6 +184,7 @@
         "vsce": "*"
     },
     "scripts": {
-        "publish": "vsce publish"
+        "publish": "vsce publish",
+        "login": "vsce login thongdong7"
     }
 }
