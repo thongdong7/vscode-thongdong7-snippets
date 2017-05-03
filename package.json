@@ -167,7 +167,8 @@
             },
             {
                 "key": "ctrl+f2",
-                "command": "workbench.action.tasks.runTask"
+                "command": "workbench.action.tasks.runTask",
+                "args": "storybook"
             },
             {
                 "key": "alt+f2",

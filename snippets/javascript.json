@@ -76,6 +76,13 @@
     ],
     "description": "Javascript Class"
   },
+  "Lodash Import": {
+    "prefix": "impl",
+    "body": [
+      "import $1 from \"lodash/$1\";"
+    ],
+    "description": "Import lodash function"
+  },
   "ESLint disable": {
     "prefix": "esd",
     "body": [
